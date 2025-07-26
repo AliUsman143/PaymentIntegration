@@ -2,9 +2,21 @@
 import { useRouter } from 'next/navigation';
 
 const plans = [
-  { name: 'Basic', price: 9, priceId: 'price_1Rna604Fp08t0e6xzRNQjj9N' },
-  { name: 'Standard', price: 29, priceId: 'price_1Rna7k4Fp08t0e6x74zDggnY' },
-  { name: 'Premium', price: 99, priceId: 'price_1Rna8A4Fp08t0e6xqROGG9LU' },
+  { 
+    name: 'Basic', 
+    price: 9, 
+    priceId: process.env.NEXT_PUBLIC_STRIPE_BASIC_PRICE_ID 
+  },
+  { 
+    name: 'Standard', 
+    price: 29, 
+    priceId: process.env.NEXT_PUBLIC_STRIPE_STANDARD_PRICE_ID 
+  },
+  { 
+    name: 'Premium', 
+    price: 99, 
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PREMIUM_PRICE_ID 
+  },
 ];
 
 export default function HomePage() {
